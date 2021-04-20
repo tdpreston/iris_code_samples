@@ -40,6 +40,14 @@ str(iris)
     ##  $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...
 
 ``` r
+iris %>% 
+  select_if(is.numeric) %>% 
+  plot(col = as.numeric(iris$Species)+1, pch = 16)
+```
+
+![](iris_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+
+``` r
 g1 <- ggplot(iris, aes(Sepal.Length, col = Species)) + geom_density()
 g2 <- ggplot(iris, aes(Sepal.Width, col = Species)) + geom_density()
 g3 <- ggplot(iris, aes(Petal.Length, col = Species)) + geom_density()
@@ -48,6 +56,6 @@ g4 <- ggplot(iris, aes(Petal.Width, col = Species)) + geom_density()
 grid.arrange(g1, g2, g3, g4, nrow = 2, ncol = 2)
 ```
 
-![](iris_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](iris_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 # End
