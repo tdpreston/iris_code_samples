@@ -562,6 +562,9 @@ print("Mean Accuracy:", round(np.mean(acc), 3))
 ```python
 # Train, test (no fold)
 
+Xtr, Xts, ytr, yts = train_test_split(X, y, test_size=.33, random_state=24)
+
+
 print("Accuracy:", metrics.accuracy_score(qda.predict(Xts), yts))
 
 metrics.plot_confusion_matrix(qda, Xts, yts)
@@ -611,6 +614,8 @@ print("Mean Accuracy:", round(np.mean(acc), 3))
 ```python
 # Train, test (no fold)
 
+Xtr, Xts, ytr, yts = train_test_split(X, y, test_size=.33, random_state=24)
+
 print("Accuracy:", metrics.accuracy_score(sv1.predict(Xts), yts))
 
 metrics.plot_confusion_matrix(sv1, Xts, yts)
@@ -659,6 +664,8 @@ print("Mean Accuracy:", round(np.mean(acc), 3))
 
 ```python
 # Train, test (no fold)
+
+Xtr, Xts, ytr, yts = train_test_split(X, y, test_size=.33, random_state=24)
 
 print("Accuracy:", metrics.accuracy_score(knn.predict(Xts), yts))
 
@@ -712,6 +719,8 @@ print("Mean Accuracy:", round(np.mean(acc), 3))
 
 ```python
 # Train, test (no fold)
+
+Xtr, Xts, ytr, yts = train_test_split(X, y, test_size=.33, random_state=24)
 
 print("Accuracy:", metrics.accuracy_score(nn.predict(Xts), yts))
 
